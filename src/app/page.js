@@ -16,7 +16,7 @@ export default function page() {
     <ProductSlider/>
     <IndustriesWeServe/>
     <WhyChooseUs/>
-    {/* <AboutUs/> */}
+    <AboutUs/>
     <StatsSection/>
     </>
   )
