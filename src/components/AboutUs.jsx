@@ -3,8 +3,9 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import VerticalInfiniteSlider from "./VerticalSlider";
 
-const IndustriesWeServe = () => {
+const AboutUs = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -16,23 +17,12 @@ const IndustriesWeServe = () => {
   const rightY = useTransform(scrollYProgress, [0, 0.2], ["0%", "100%"]);
 
   // Sliding door animation
-  const leftX = useTransform(scrollYProgress, [0.3, 0.5], ["0%", "-100%"]);
-  const rightX = useTransform(scrollYProgress, [0.3, 0.5], ["0%", "100%"]);
+  const leftX = useTransform(scrollYProgress, [0.3, 0.5], ["0%", "-50%"]);
+  const rightX = useTransform(scrollYProgress, [0.3, 0.5], ["0%", "50%"]);
 
   // Final text and image animation
   const textOpacity = useTransform(scrollYProgress, [0.5, 0.7], [0, 1]);
   const textY = useTransform(scrollYProgress, [0.5, 0.7], ["30px", "0px"]);
-
-  const smallImageTopLeftY = useTransform(
-    scrollYProgress,
-    [0.6, 0.8],
-    ["-100%", "0%"]
-  );
-  const smallImageBottomRightY = useTransform(
-    scrollYProgress,
-    [0.6, 0.8],
-    ["100%", "0%"]
-  );
 
   return (
     <section ref={targetRef} className="h-[350vh] relative bg-black">
@@ -40,33 +30,25 @@ const IndustriesWeServe = () => {
         <div className="absolute inset-0 flex">
           {/* Left Panel */}
           <motion.div style={{ x: leftX }} className="w-1/2 h-full relative">
-            <div className="absolute inset-0">
-              <Image
-                src="/assets/applications/industrial-laundries.webp"
-                alt="Hospitality & Laundry"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute bottom-14 left-10 text-white">
-                <h2 className="max-w-xl text-6xl font-extrabold uppercase">
-                  {" "}
-                  Hospitality & Laundry
-                </h2>
+            <div className="flex w-full">
+              <div className="w-[30%]">
+                <VerticalInfiniteSlider />
+              </div>
+              <div className="w-[70%]">
+                <Image
+                  src="/assets/applications/industrial-laundries.webp"
+                  alt="Hospitality & Laundry"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute bottom-14 left-10 text-white">
+                  <h2 className="max-w-xl text-6xl font-extrabold uppercase">
+                    {" "}
+                    Hospitality & Laundry
+                  </h2>
+                </div>
               </div>
             </div>
-            <motion.div style={{ y: leftY }} className="absolute inset-0">
-              <Image
-                src="/assets/applications/automotive-engineering-industry.webp"
-                alt="Automotive & Engineering"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute bottom-14 left-10 text-white">
-                <h2 className="max-w-xl text-6xl font-extrabold uppercase mb-4">
-                  Automotive & Engineering
-                </h2>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Right Panel */}
@@ -85,19 +67,6 @@ const IndustriesWeServe = () => {
                 </h2>
               </div>
             </div>
-            <motion.div style={{ y: rightY }} className="absolute inset-0">
-              <Image
-                src="/assets/applications/chemical-industry.webp"
-                alt="Chemical & Pharmaceutical"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute top-24 right-10 text-white text-right">
-                <h2 className="max-w-xl text-6xl font-extrabold uppercase">
-                  Chemical Industry
-                </h2>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
 
@@ -106,17 +75,6 @@ const IndustriesWeServe = () => {
           style={{ opacity: textOpacity, y: textY }}
           className="absolute inset-0 flex flex-col items-center justify-center text-white bg-black z-10"
         >
-          <motion.div
-            style={{ y: smallImageTopLeftY }}
-            className="absolute top-28 left-20"
-          >
-            <Image
-              src="/assets/applications/textile-industry.webp"
-              alt="industrial-laundries"
-              width={350}
-              height={300}
-            />
-          </motion.div>
           <div className="text-center uppercase text-white font-extrabold z-10 mx-auto max-w-6xl">
             {/* Line 1 (Bold) */}
             <p className="text-5xl  md:text-7xl ">
@@ -134,21 +92,10 @@ const IndustriesWeServe = () => {
           <button className="mt-8 px-8 py-3 border border-white text-white font-semibold rounded hover:bg-white hover:text-black transition-colors duration-300">
             KNOW MORE ABOUT US
           </button>
-          <motion.div
-            style={{ y: smallImageBottomRightY }}
-            className="absolute bottom-14 right-20"
-          >
-            <Image
-              src="/assets/applications/food-industry.webp"
-              alt="Workers"
-              width={350}
-              height={300}
-            />
-          </motion.div>
         </motion.div>
       </div>
     </section>
   );
 };
 
-export default IndustriesWeServe;
+export default AboutUs;

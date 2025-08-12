@@ -36,7 +36,7 @@ export default function ClientSlider() {
       </div>
       <div className="max-w-7xl mx-auto  text-center pt-12">
         <ReusableTitle/>
-        <p className="text-gray-600/80 max-w-5xl mx-auto">
+        <p className=" max-w-5xl mx-auto">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           Exercitationem fugit voluptates earum, atque harum, ratione neque
           illum fuga omnis commodi repellendus distinctio praesentium dolores

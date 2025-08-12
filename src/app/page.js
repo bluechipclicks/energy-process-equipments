@@ -1,9 +1,11 @@
-import AnimatedSection from '@/components/IndustriesWeServe'
 import ClientSlider from '@/components/ClientSilder'
 import Hero from '@/components/Hero'
 import ProductSlider from '@/components/ProductSlider'
 import React from 'react'
 import StatsSection from '@/components/StatsSection'
+import WhyChooseUs from '@/components/WhyChooseUs'
+import IndustriesWeServe from '@/components/IndustriesWeServe'
+import AboutUs from '@/components/AboutUs'
 
 export default function page() {
   return (
@@ -12,7 +14,9 @@ export default function page() {
     <Hero/>
     <ClientSlider/>
     <ProductSlider/>
-    <AnimatedSection/>
+    <IndustriesWeServe/>
+    <WhyChooseUs/>
+    {/* <AboutUs/> */}
     <StatsSection/>
     </>
   )
