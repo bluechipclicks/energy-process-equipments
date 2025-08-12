@@ -24,3 +24,33 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Apply the animation */
+.animate-slide {
+  animation: slide 20s linear infinite;
+}
+.group:hover .animate-slide {
+  animation-play-state: paused;
+}
+.clip-trapezoid {
+  clip-path: polygon(0% 100%, 5% 0%, 100% 0%, 95% 100%);
+}
+.clip-trapezoid-product {
+  clip-path: polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%);
+}
+.clip-trapezoid-footer {
+  clip-path: polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%);
+}
+.text-outline {
+  color: transparent; /* Make the text fill transparent */
+  -webkit-text-stroke-width: 2px; /* Set the stroke width for WebKit browsers */
+  -webkit-text-stroke-color: white; /* Set the stroke color */
+}
