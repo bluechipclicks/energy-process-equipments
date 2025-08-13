@@ -66,10 +66,10 @@ export default function WhyChooseUs() {
   };
 
   return (
-    <div className="bg-gray-50 py-12 sm:py-16">
+    <div className="bg-gray-50 py-9 sm:py-16">
       <div className="px-6 lg:px-8">
         <div className="mx-auto max-w-3xl lg:text-center">
-          <div className="relative w-full max-w-sm mx-auto mb-6">
+          <div className="relative w-full max-w-sm mx-auto mb-4 md:mb-6">
             {/* Trapezoid shape */}
             <div
               className="h-10 bg-red-600"
@@ -84,9 +84,9 @@ export default function WhyChooseUs() {
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-16  lg:max-w-none">
+        <div className=" mt-2 sm:mt-16  lg:max-w-none">
           <motion.dl
-            className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-3"
+            className="grid  grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-3"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -100,25 +100,25 @@ export default function WhyChooseUs() {
               >
                 {feature.name && (
                   <dt className="text-base font-semibold leading-7 text-gray-900">
-                    <div className="flex h-28 w-52 flex-none items-center justify-center bg-red-600">
+                    <div className="flex h-16 w-40  md:h-28 md:w-52 flex-none items-center justify-center bg-red-600">
                       <Image
-                        className="h-24 w-24 text-white"
+                        className="h-14 w-14 md:h-24 md:w-24 text-white"
                         src={feature.icon}
                         alt={feature.name}
                         height={100}
                         width={100}
                       />
                     </div>
-                    <h2 className="text-2xl uppercase text-center max-w-xs mx-auto mt-6">
+                    <h2 className="text-xl md:text-2xl uppercase text-center max-w-xs mx-auto mt-6">
                       {feature.name}
                     </h2>
                   </dt>
                 )}
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 ">
+                <dd className="mt-4 flex flex-auto flex-col text-sm md:text-lg  ">
                   <p
                     className={`max-w-md ${
-                      index !== 0 && "mx-auto text-center"
-                    } pb-8`}
+                      index !== 0 && "mx-auto text-center pb-8"
+                    } `}
                   >
                     {feature.description}
                   </p>

@@ -52,7 +52,7 @@ const ProductSlider = () => {
     // Main container for the slider section
     <div className="relative w-full  flex flex-col items-center   overflow-hidden pb-16 ">
       {/* Swiper Component Container */}
-      <div className="relative w-full max-w-xs mx-auto mb-12">
+      <div className="relative w-full max-w-xs mx-auto mb-9 md:mb-12">
       {/* Trapezoid shape */}
       <div className=" h-10 bg-red-600 clip-trapezoid-product"></div>
 
@@ -61,7 +61,7 @@ const ProductSlider = () => {
        Our Products
       </div>
     </div>
-      <div className="w-full h-[60vh] max-w-7xl relative mb-6">
+      <div className="w-full h-[60vh] max-w-7xl relative mb-4 md:mb-6">
         <Swiper
           modules={[Navigation]}
           loop={true}
@@ -84,7 +84,7 @@ const ProductSlider = () => {
               {/* Animated Background Text */}
               <div className=" text-center flex items-center justify-center z-0 overflow-hidden">
                 <motion.h1
-                  className="text-4xl md:text-9xl font-extrabold text-gray-200/80 "
+                  className="text-4xl md:text-6xl lg:text-9xl font-extrabold text-gray-200/80 "
                   // Animate based on whether this slide is the active one
                   variants={textVariants}
                   initial="hidden"
@@ -95,14 +95,14 @@ const ProductSlider = () => {
               </div>
 
               {/* Product Image */}
-              <div className="relative z-10 w-full flex items-center justify-center bottom-96">
+              <div className="relative z-10 w-full  flex items-center justify-center lg:bottom-96">
                 <Image
                   src={product.image}
                   alt={product.name}
                   width={800}
                   height={650}
                   priority={index === 0} // Prioritize loading the first image
-                  className="object-contain h-[490px]"
+                  className="object-contain md:h-[490px]"
                 />
               </div>
             </SwiperSlide>
@@ -112,7 +112,7 @@ const ProductSlider = () => {
 
       {/* Call-to-Action Buttons */}
       <div className=" z-20 flex items-center gap-4">
-        <button className="bg-black text-white py-3 px-8 rounded text-lg uppercase font-medium hover:bg-black transition-colors duration-300">
+        <button className="bg-black text-white py-3 px-8 rounded  uppercase font-medium hover:bg-black transition-colors duration-300 md:text-lg text-sm">
           View All Products
         </button>
       

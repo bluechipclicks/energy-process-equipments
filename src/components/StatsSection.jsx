@@ -1,20 +1,27 @@
 // components/StatsSection.jsx
+"use client"
+import { delay, motion } from "framer-motion";
+import Image from "next/image";
 
 const stats = [
   {
     count: "15+ Years",
+    icon:"/assets/about/experience.webp",
     title: "Boiler Manufacturing Experience",
     description:
       "Designing and producing reliable, long-life boilers for diverse industrial applications for over 15 years.",
   },
   {
     count: "Since 1994",
+      icon:"/assets/about/since-1994.webp",
     title: "Company Establishment",
+    
     description:
       "Founded on February 25, 1994, with a strong foundation in engineering and manufacturing expertise.",
   },
   {
-    count: "6+ Product Categories",
+    count: "6+ Product",
+      icon:"/assets/about/product-category.svg",
     title: "Innovative Product Line",
     description:
       "Manufacturer of IBR boilers, Thermic Fluid Systems, Hot Air Generators, DM Plants, and more.",
@@ -28,33 +35,73 @@ const stats = [
 ];
 
 export default function StatsSection() {
-  return (
-    <section className=" py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-3  gap-8 text-center">
-          {stats.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-md  hover:shadow-md transition"
-            >
-              <div className="relative w-full max-w-2xl mx-auto mb-6">
-                {/* Trapezoid shape */}
-                <div className=" h-16 bg-red-600 clip-trapezoid-stats"></div>
+   const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+        
+      },
+    },
+  };
 
-                {/* Text on top of the shape */}
-                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl uppercase">
-                  {item.count}
-                </div>
-              </div>
-              <h4 className="mt-2 text-lg font-semibold text-gray-800  italic">
-                {item.title}
-              </h4>
-              <p className="mt-2 text-sm text-gray-600  italic">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+      },
+    },
+  };
+  return (
+    <section className="hidden md:block">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.dl
+            className="grid  grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8  lg:grid-cols-3"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {stats.map((feature, index) => (
+              <motion.div
+                key={index}
+                className={`flex flex-col border-2`}
+                variants={itemVariants}
+              >
+                {feature.title&& (
+                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                    <div className="flex h-28 w-52 flex-none items-center justify-center bg-red-600">
+                      <Image
+                        className="h-24 w-24 text-white"
+                        src={feature.icon}
+                        alt={feature.title}
+                        height={100}
+                        width={100}
+                      />
+                    </div>
+                    <h2 className="text-2xl uppercase text-center max-w-xs mx-auto mt-6">
+                      {feature.title}
+                    </h2>
+                  </dt>
+                )}
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 ">
+                  <p
+                    className={`hidden md:block max-w-sm px-4 font-normal ${
+                      index !== 0 && "mx-auto text-center"
+                    } pb-8`}
+                  >
+                    {feature.description}
+                  </p>
+                </dd>
+              </motion.div>
+            ))}
+          </motion.dl>
+        
       </div>
     </section>
   );

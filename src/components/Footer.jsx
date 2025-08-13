@@ -7,11 +7,11 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-black">
+    <footer className="bg-black px-6 lg:px-8">
       {/* Top Section */}
       <div className="relative">
-        <div className="container max-w-7xl mx-auto px-2 lg:px-4 py-16">
-          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="container max-w-7xl mx-auto py-9 md:py-16">
+          <div className="grid gap-4 md:gap-12 sm:grid-cols-2 lg:grid-cols-4">
             {/* Column 1: Brand and Description */}
             <div className="lg:col-span-2">
               <Link href="/" className="font-logo text-6xl text-gray-800 ">
@@ -168,7 +168,7 @@ const Footer = () => {
         </div>
 
         {/* Schedule Button (Orange background) */}
-        <div className="bg-red-600 text-white flex items-center justify-center p-8 w-full lg:w-1/4">
+        <div className="bg-red-600 text-white flex items-center justify-center p-4 md:p-8 w-full lg:w-1/4">
           <button className="font-bold text-lg hover:opacity-90 transition-opacity">
             Schedule An Appointment
           </button>

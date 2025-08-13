@@ -37,9 +37,12 @@ const IndustriesWeServe = () => {
   return (
     <section ref={targetRef} className="h-[350vh] relative bg-black">
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        <div className="absolute inset-0 flex">
+        <div className="absolute inset-0 flex flex-col md:flex-row">
           {/* Left Panel */}
-          <motion.div style={{ x: leftX }} className="w-1/2 h-full relative">
+          <motion.div
+            style={{ x: leftX }}
+            className="w-full md:w-1/2 h-full relative"
+          >
             <div className="absolute inset-0">
               <Image
                 src="/assets/applications/industrial-laundries.webp"
@@ -47,8 +50,8 @@ const IndustriesWeServe = () => {
                 fill
                 className="object-cover"
               />
-              <div className="absolute bottom-14 left-10 text-white">
-                <h2 className="max-w-xl text-6xl font-extrabold uppercase">
+              <div className="absolute bottom-4 md:bottom-14 left-5 md:left-10 text-white">
+                <h2 className="max-w-xl text-3xl md:text-6xl font-extrabold uppercase">
                   {" "}
                   Hospitality & Laundry
                 </h2>
@@ -61,8 +64,8 @@ const IndustriesWeServe = () => {
                 fill
                 className="object-cover"
               />
-              <div className="absolute bottom-14 left-10 text-white">
-                <h2 className="max-w-xl text-6xl font-extrabold uppercase mb-4">
+              <div className="absolute bottom-4 md:bottom-14 left-5 md:left-10 text-white">
+                <h2 className="max-w-xl text-3xl md:text-6xl font-extrabold uppercase mb-4">
                   Automotive & Engineering
                 </h2>
               </div>
@@ -70,7 +73,10 @@ const IndustriesWeServe = () => {
           </motion.div>
 
           {/* Right Panel */}
-          <motion.div style={{ x: rightX }} className="w-1/2 h-full relative">
+          <motion.div
+            style={{ x: rightX }}
+            className="w-full md:w-1/2 h-full relative"
+          >
             <div className="absolute inset-0">
               <Image
                 src="/assets/applications/paper-industry.webp"
@@ -78,8 +84,8 @@ const IndustriesWeServe = () => {
                 fill
                 className="object-cover"
               />
-              <div className="absolute top-24 left-10 text-white">
-                <h2 className="max-w-xl text-6xl font-extrabold uppercase">
+              <div className="absolute top-5 md:top-24 left-5 md:left-10 text-white">
+                <h2 className="max-w-xl text-3xl md:text-6xl font-extrabold uppercase">
                   {" "}
                   Paper & Pulp Industry
                 </h2>
@@ -92,8 +98,8 @@ const IndustriesWeServe = () => {
                 fill
                 className="object-cover"
               />
-              <div className="absolute top-24 right-10 text-white text-right">
-                <h2 className="max-w-xl text-6xl font-extrabold uppercase">
+              <div className="absolute top-48 md:top-24 right-10 text-white text-right">
+                <h2 className="max-w-xl text-3xl md:text-6xl font-extrabold uppercase">
                   Chemical Industry
                 </h2>
               </div>
@@ -113,36 +119,38 @@ const IndustriesWeServe = () => {
             <Image
               src="/assets/applications/textile-industry.webp"
               alt="industrial-laundries"
-              width={350}
+              width={250}
               height={300}
+              className="h-32 md:h-60 object-cover"
             />
           </motion.div>
-          <div className="text-center uppercase text-white font-extrabold z-10 mx-auto max-w-6xl">
+          <div className="text-center uppercase text-white font-extrabold z-10 mx-auto max-w-6xl px-4 mt-14 md:mt-0">
             {/* Line 1 (Bold) */}
-            <p className="text-5xl  md:text-7xl ">
+            <p className="text-2xl md:text-6xl  lg:text-7xl ">
               And we continuously aspire to
             </p>
 
             {/* Line 3 (Outlined) */}
-            <p className="text-outline text-6xl  md:text-7xl ">
+            <p className="text-outline text-2xl md:text-6xl  lg:text-7xl ">
               Small and medium scale
             </p>
 
             {/* Line 4 (Bold) */}
-            <p className="text-6xl  md:text-7xl ">Industries</p>
+            <p className="text-2xl md:text-6xl  lg:text-7xl ">Industries</p>
           </div>
-          <button className="mt-8 px-8 py-3 border border-white text-white font-semibold rounded hover:bg-white hover:text-black transition-colors duration-300">
+          <button className="mt-4 md:mt-8 px-8 py-3 border border-white text-white font-semibold rounded hover:bg-white hover:text-black transition-colors duration-300 md:text-lg text-sm">
             KNOW MORE ABOUT US
           </button>
           <motion.div
             style={{ y: smallImageBottomRightY }}
-            className="absolute bottom-14 right-20"
+            className="absolute bottom-10 lg:bottom-14 right-20"
           >
             <Image
               src="/assets/applications/food-industry.webp"
               alt="Workers"
-              width={350}
+              width={250}
               height={300}
+              className="h-32 md:h-60 object-cover"
             />
           </motion.div>
         </motion.div>

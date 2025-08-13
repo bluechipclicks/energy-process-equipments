@@ -12,10 +12,10 @@ const VerticalInfiniteSlider = ({title}) => {
               alt="Mission and Vision Slider"
               width={60} // Corresponds to w-48
               height={60} // The actual height of your image
-              className="w-32 h-32"
+              className="w-16 h-16 md:w-28 md:h-28"
               priority // Recommended for LCP images
             />
-            <p className=" text-7xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
+            <p className=" text-4xl md:text-6xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
               {title}
             </p>
           </div>
@@ -25,10 +25,10 @@ const VerticalInfiniteSlider = ({title}) => {
               alt="Mission and Vision Slider"
               width={60} // Corresponds to w-48
               height={60} // The actual height of your image
-              className="w-32 h-32"
+              className="w-16 h-16 md:w-28 md:h-28"
               priority // Recommended for LCP images
             />
-            <p className=" text-7xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
+            <p className=" text-4xl md:text-6xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
               {title}
             </p>
           </div>{" "}
@@ -38,10 +38,10 @@ const VerticalInfiniteSlider = ({title}) => {
               alt="Mission and Vision Slider"
               width={60} // Corresponds to w-48
               height={60} // The actual height of your image
-              className="w-32 h-32"
+              className="w-16 h-16 md:w-28 md:h-28"
               priority // Recommended for LCP images
             />
-            <p className=" text-7xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
+            <p className=" text-4xl md:text-6xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
               {title}
             </p>
           </div>{" "}
@@ -51,10 +51,10 @@ const VerticalInfiniteSlider = ({title}) => {
               alt="Mission and Vision Slider"
               width={60} // Corresponds to w-48
               height={60} // The actual height of your image
-              className="w-32 h-32"
+              className="w-16 h-16 md:w-28 md:h-28"
               priority // Recommended for LCP images
             />
-            <p className=" text-7xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
+            <p className=" text-4xl md:text-6xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
               {title}
             </p>
           </div>{" "}
@@ -64,10 +64,10 @@ const VerticalInfiniteSlider = ({title}) => {
               alt="Mission and Vision Slider"
               width={60} // Corresponds to w-48
               height={60} // The actual height of your image
-              className="w-32 h-32"
+              className="w-16 h-16 md:w-28 md:h-28"
               priority // Recommended for LCP images
             />
-            <p className=" text-7xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
+            <p className=" text-4xl md:text-6xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
               {title}
             </p>
           </div>{" "}
@@ -77,10 +77,10 @@ const VerticalInfiniteSlider = ({title}) => {
               alt="Mission and Vision Slider"
               width={60} // Corresponds to w-48
               height={60} // The actual height of your image
-              className="w-32 h-32"
+              className="w-16 h-16 md:w-28 md:h-28"
               priority // Recommended for LCP images
             />
-            <p className=" text-7xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
+            <p className=" text-4xl md:text-6xl font-extrabold -rotate-90 my-28  text-white/80 tracking-wider">
               {title}
             </p>
           </div>{" "}
