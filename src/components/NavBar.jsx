@@ -63,10 +63,10 @@ const NavBar = () => {
         >
           <div className="flex justify-end p-4">
             <button onClick={toggleMenu}>
-              <FiX className="h-6 w-6 text-gray-600" />
+              <FiX className="h-6 w-6 text-white bg-red-600 rounded-full p-2" />
             </button>
           </div>
-          <ul className="flex flex-col items-center gap-8 mt-8">
+          <ul className="flex flex-col gap-8 mt-8 px-6">
             {navLinks.left.map((link) => (
               <li key={link.href}>
                 <Link

@@ -93,7 +93,7 @@ const AboutUs = () => {
           
           <div className="text-center   font-extrabold z-10 mx-auto max-w-7xl px-6 lg:px-0">
             {/* Line 1 (Bold) */}
-            <div className="mx-auto max-w-3xl lg:text-center mt-12">
+            <div className="mx-auto max-w-3xl lg:text-center mt-24 md:mt-12">
               <div className="relative w-full max-w-xs mx-auto mb-6">
                 {/* Trapezoid shape */}
                 <div
@@ -109,19 +109,19 @@ const AboutUs = () => {
                 </div>
               </div>
             </div>
-            <p className="text-lg  md:text-4xl mb-10 max-w-6xl mx-auto">
+            <p className="text-lg  md:text-4xl mb-4 md:mb-10 max-w-6xl mx-auto">
               Energy Process Equipments specializes in designing and
               manufacturing reliable boilers and heating systems, backed by 15+
               years of expertise, innovation, and strong customer service,
               ensuring high-quality solutions tailored to diverse industrial
               needs.
             </p>
-            {/* <p className="text-5xl  md:text-4xl mb-8">
+            <p className="text-lg  md:text-4xl mb-8 md:hidden">
               With a dedicated team and visionary leadership, we prioritize
-              continuous improvement, cutting-edge technology, and
-              round-the-clock support to exceed client expectations across
+              continuous improvement and
+               support to exceed client expectations across
               various industries and applications.
-            </p> */}
+            </p>
             <StatsSection />
           </div>
         </motion.div>

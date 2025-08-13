@@ -109,12 +109,12 @@ export default function WhyChooseUs() {
                         width={100}
                       />
                     </div>
-                    <h2 className="text-xl md:text-2xl uppercase text-center max-w-xs mx-auto mt-6">
+                    <h2 className="text-xl md:text-2xl uppercase text-center max-w-xs mx-auto mt-6 text-black">
                       {feature.name}
                     </h2>
                   </dt>
                 )}
-                <dd className="mt-4 flex flex-auto flex-col text-sm md:text-lg  ">
+                <dd className="mt-4 flex flex-auto flex-col text-sm md:text-lg  text-black">
                   <p
                     className={`max-w-md ${
                       index !== 0 && "mx-auto text-center pb-8"

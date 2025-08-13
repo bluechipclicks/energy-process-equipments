@@ -104,6 +104,9 @@ export default function GlobalPresence() {
           minZoom={6}
           maxZoom={6}
         //   metaWheelZoom={false}
+        twoFingerDrag={false}
+        touchEvents={false}
+        
         >
           <Marker
             anchor={countries[activeIndex].coordinates}
@@ -112,7 +115,24 @@ export default function GlobalPresence() {
         </Map>
       </div>
 
-      <div className="absolute bottom-14 left-0 right-0 z-20">
+      <div className="absolute bottom-14 left-0 right-0 z-20">  
+  <div className="mx-auto max-w-3xl lg:text-center mt-12">
+              <div className="relative w-full max-w-xs mx-auto md:mb-4">
+                {/* Trapezoid shape */}
+                <div
+                  className="h-10 bg-red-600"
+                  style={{
+                    clipPath: "polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%)",
+                  }}
+                ></div>
+
+                {/* Text on top of the shape */}
+                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg uppercase">
+                  Global Presence
+                </div>
+              </div>
+            </div>
+
         <Swiper
           modules={[Autoplay]}
           spaceBetween={50}
