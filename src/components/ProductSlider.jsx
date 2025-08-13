@@ -1,11 +1,13 @@
 "use client";
 // components/ProductSlider.js
-
+import { BsArrowLeft } from "react-icons/bs";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { LuMoveRight } from "react-icons/lu";
+import { BsArrowRight } from "react-icons/bs";
 
 // Import Swiper styles
 import "swiper/css";
@@ -50,14 +52,14 @@ const ProductSlider = () => {
 
   return (
     // Main container for the slider section
-    <div className="relative w-full  flex flex-col items-center   overflow-hidden pb-16 ">
+    <div className="relative w-full  flex flex-col items-center   overflow-hidden pb-16 bg-white">
       {/* Swiper Component Container */}
       <div className="relative w-full max-w-xs mx-auto mb-9 md:mb-12">
       {/* Trapezoid shape */}
       <div className=" h-10 bg-red-600 clip-trapezoid-product"></div>
 
       {/* Text on top of the shape */}
-      <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg uppercase">
+      <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl uppercase">
        Our Products
       </div>
     </div>
@@ -95,7 +97,7 @@ const ProductSlider = () => {
               </div>
 
               {/* Product Image */}
-              <div className="relative z-10 w-full  flex items-center justify-center lg:bottom-96">
+              <div className="relative z-10 w-full  flex items-center justify-center lg:bottom-52">
                 <Image
                   src={product.image}
                   alt={product.name}
@@ -122,11 +124,15 @@ const ProductSlider = () => {
       <div className="absolute top-1/2 -translate-y-1/2 right-4 md:right-8 lg:right-12 z-20 flex flex-col gap-3">
         {/* Next Button */}
         <button className="swiper-button-next-custom cursor-pointer border border-gray-200/80 bg-white rounded-full w-11 h-11 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors">
-          <span className="text-xl">→</span>
+       <BsArrowRight className="text-xl" />
+
+
+
         </button>
         {/* Previous Button */}
         <button className="swiper-button-prev-custom cursor-pointer bg-white rounded-full border border-gray-200/80 w-11 h-11 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors">
-          <span className="text-xl">←</span>
+                 <BsArrowLeft className="text-xl"/>
+
         </button>
       </div>
     </div>

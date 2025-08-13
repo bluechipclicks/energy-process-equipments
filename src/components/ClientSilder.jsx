@@ -18,7 +18,7 @@ export default function ClientSlider() {
   const allClients = [...clients, ...clients];
 
   return (
-    <section className="w-full overflow-hidden md:pt-12 pb-9 md:pb-16 ">
+    <section className="w-full overflow-hidden md:pt-12 pb-9 md:pb-16 bg-white">
       <div className="relative group">
         <div className="flex animate-slide gap-8 w-max">
           {allClients.map((src, index) => (
@@ -34,29 +34,30 @@ export default function ClientSlider() {
           ))}
         </div>
       </div>
-      <div className="max-w-7xl mx-auto  text-center pt-4 md:pt-12 px-6">
-         <div className="mx-auto max-w-3xl lg:text-center">
-              <div className="relative w-full max-w-xs mx-auto mb-6">
-                {/* Trapezoid shape */}
-                <div
-                  className="h-10 bg-red-600"
-                  style={{
-                    clipPath: "polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%)",
-                  }}
-                ></div>
+      <div className="max-w-7xl mx-auto  text-center pt-4 md:pt-12 px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl lg:text-center">
+          <div className="relative w-full max-w-xs mx-auto mb-6">
+            {/* Trapezoid shape */}
+            <div
+              className="h-10 bg-red-600"
+              style={{
+                clipPath: "polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%)",
+              }}
+            ></div>
 
-                {/* Text on top of the shape */}
-                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg uppercase">
-               Your Growth Partner               </div>
-              </div>
+            {/* Text on top of the shape */}
+            <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl uppercase">
+              Your Growth Partner{" "}
             </div>
-        <p className=" max-w-5xl mx-auto">
+          </div>
+        </div>
+        <p className=" max-w-6xl mx-auto text-black text-xl font-light">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           Exercitationem fugit voluptates earum, atque harum, ratione neque
           illum fuga omnis commodi repellendus distinctio praesentium dolores
-          quo aspernatur molestias sit at alias ratione neque
-          illum fuga omnis commodi repellendus distinctio praesentium dolores
-          quo aspernatur molestias sit at alias.
+          quo aspernatur molestias sit at alias ratione neque illum fuga omnis
+          commodi repellendus distinctio praesentium dolores quo aspernatur
+          molestias sit at alias.
         </p>
       </div>
     </section>

@@ -22,7 +22,7 @@ const Footer = () => {
                   width={360}
                 />
               </Link>
-              <p className="text-gray-400 mt-4 max-w-xl">
+              <p className="text-white mt-4 max-w-xl">
                 Energy Process Equipments (EPE) has been designing and
                 manufacturing boilers for over 15 years, thus developing a
                 reputation for producing reliable and long-life products. Since
@@ -47,7 +47,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white transition-colors"
                   >
                     About Us
                   </a>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white transition-colors"
                   >
                    Infrastructure
                   </a>
@@ -63,7 +63,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white transition-colors"
                   >
                     Our Clients
                   </a>
@@ -71,7 +71,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white transition-colors"
                   >
                   Industrires We Serve
                   </a>
@@ -95,7 +95,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white transition-colors"
                   >
                     IBR Boiler
                   </a>
@@ -103,7 +103,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white transition-colors"
                   >
                     Small Industrial Boiler [SIB]
                   </a>
@@ -111,7 +111,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white transition-colors"
                   >
                     Small Industrial Boiler [SIB]
                   </a>
@@ -119,7 +119,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white transition-colors"
                   >
                     Hot Air Generators
                   </a>
@@ -131,7 +131,7 @@ const Footer = () => {
       </div>
 
       {/* Middle Section: Contact Info and Appointment */}
-      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-2 lg:px-4 ">
+      <div className="flex flex-col lg:flex-row max-w-7xl mx-auto px-2 lg:px-0 ">
         {/* Contact Info (White background) */}
         <div className="bg-white text-black p-8 flex-grow w-full lg:w-3/4">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">

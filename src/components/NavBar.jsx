@@ -26,7 +26,7 @@ const NavBar = () => {
 
   return (
     <header className="w-full py-5 bg-white shadow-sm fixed z-30">
-      <nav className="flex items-center justify-between max-w-7xl mx-auto px-4 gap-4">
+      <nav className="flex items-center justify-between px-6 lg:px-8 gap-4">
         {/* Logo */}
         <div className="flex flex-col items-center filter drop-shadow-[3px_3px_3px_rgba(0,0,0,0.1)]">
           <Link href="/" className="font-logo text-6xl text-gray-800">
@@ -35,12 +35,12 @@ const NavBar = () => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <ul className="hidden md:flex items-center gap-12 mt-6">
+        <ul className="hidden lg:flex items-center gap-12 mt-6">
           {navLinks.left.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-light uppercase tracking-wider text-gray-600 hover:text-black transition-colors duration-300"
+                className="font-light uppercase tracking-wider text-black hover:text-red-600 transition-colors duration-300"
               >
                 {link.label}
               </Link>
@@ -49,9 +49,9 @@ const NavBar = () => {
         </ul>
 
         {/* Burger Icon for tablet and mobile */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button onClick={toggleMenu}>
-            <FiMenu className="h-6 w-6 text-gray-600 mt-4" />
+            <FiMenu className="h-6 w-6 text-black mt-4" />
           </button>
         </div>
 

@@ -79,12 +79,12 @@ export default function WhyChooseUs() {
             ></div>
 
             {/* Text on top of the shape */}
-            <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg uppercase">
+            <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl uppercase">
               Why Choose Us
             </div>
           </div>
         </div>
-        <div className=" mt-2 sm:mt-16  lg:max-w-none">
+        <div className=" mt-2 sm:mt-14  lg:max-w-none">
           <motion.dl
             className="grid  grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8 lg:max-w-none lg:grid-cols-3"
             variants={containerVariants}
@@ -99,7 +99,7 @@ export default function WhyChooseUs() {
                 variants={itemVariants}
               >
                 {feature.name && (
-                  <dt className="text-base font-semibold leading-7 text-gray-900">
+                  <dt className="text-base font-semibold leading-7 text-black">
                     <div className="flex h-16 w-40  md:h-28 md:w-52 flex-none items-center justify-center bg-red-600">
                       <Image
                         className="h-14 w-14 md:h-24 md:w-24 text-white"
@@ -117,7 +117,7 @@ export default function WhyChooseUs() {
                 <dd className="mt-4 flex flex-auto flex-col text-sm md:text-lg  text-black">
                   <p
                     className={`max-w-md ${
-                      index !== 0 && "mx-auto text-center pb-8"
+                      index !== 0 && "mx-auto text-center pb-8 px-6"
                     } `}
                   >
                     {feature.description}

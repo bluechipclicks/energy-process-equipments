@@ -61,7 +61,7 @@ export default function StatsSection() {
     <section className="hidden md:block">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.dl
-            className="grid  grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8  lg:grid-cols-3"
+            className="grid  grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8  lg:grid-cols-3"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -84,14 +84,14 @@ export default function StatsSection() {
                         width={100}
                       />
                     </div>
-                    <h2 className="text-2xl uppercase text-center max-w-xs mx-auto mt-6">
+                    <h2 className="text-xl md:text-2xl uppercase text-center max-w-xs mx-auto mt-6">
                       {feature.title}
                     </h2>
                   </dt>
                 )}
                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 ">
                   <p
-                    className={`hidden md:block max-w-sm px-4 font-normal ${
+                    className={`hidden lg:block max-w-sm px-4 text-lg font-normal ${
                       index !== 0 && "mx-auto text-center"
                     } pb-8`}
                   >

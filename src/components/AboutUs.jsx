@@ -104,12 +104,12 @@ const AboutUs = () => {
                 ></div>
 
                 {/* Text on top of the shape */}
-                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg uppercase">
+                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl uppercase">
                   About Us
                 </div>
               </div>
             </div>
-            <p className="text-lg  md:text-4xl mb-4 md:mb-10 max-w-6xl mx-auto">
+            <p className="text-lg  md:text-xl lg:text-4xl mb-4 md:mb-10 max-w-6xl mx-auto">
               Energy Process Equipments specializes in designing and
               manufacturing reliable boilers and heating systems, backed by 15+
               years of expertise, innovation, and strong customer service,

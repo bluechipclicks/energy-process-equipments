@@ -106,7 +106,7 @@ export default function GlobalPresence() {
         //   metaWheelZoom={false}
         twoFingerDrag={false}
         touchEvents={false}
-        
+
         >
           <Marker
             anchor={countries[activeIndex].coordinates}
@@ -127,7 +127,7 @@ export default function GlobalPresence() {
                 ></div>
 
                 {/* Text on top of the shape */}
-                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg uppercase">
+                <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-xl uppercase">
                   Global Presence
                 </div>
               </div>
